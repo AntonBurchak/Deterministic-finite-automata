@@ -65,22 +65,24 @@ class State {
   }
   
   
-  const testingString = '11011100013131313010100110110102';
+  // const testingString = '11011100013131313010100110110102';
   
   
   function goNextState(string) {
-    let current = q0;
-  
+    let current = q0, log = [];
+    
     for (let c in string) {
       for (let char in Object.entries(current.transitions)) {
           if (string[c] == char) {
               current = transitionsTable[current.transitions[char]];
-              console.log(current);
+              log.push(current);
           }
       }
       if (current.isAcceptState === true) break;
     }
-    return current.isAcceptState;
+    return {
+      state: current.isAcceptState,
+      log: log
+    };
   }
   
-  console.log(goNextState(testingString));
