@@ -7,16 +7,20 @@ Object.keys(OPTIONS).forEach(key => {
 
 
 function goNextState(string) {
-  let current = transitionsTable.q0, log = [];
+  let current = transitionsTable['0'], log = [];
   
   for (let c in string) {
-    for (let char in Object.entries(current.transitions)) {
-        if (string[c] == char) {
-            current = transitionsTable[current.transitions[char]];
+    
+    for (let char in Object.keys(current.transitions)) {
+      console.log(current.transitions[Object.keys(current.transitions)[char]]);
+        if (string[c] == Object.keys(current.transitions)[char] && current.transitions[Object.keys(current.transitions)[char]] !== ' ') {
+            current = transitionsTable[current.transitions[Object.keys(current.transitions)[char]]];
             log.push(current);
         }
     }
-    if (current.isAcceptState === true) break;
+    // break;
+    // if (current.isAcceptState === true) break;
+    
   }
   return {
     state: current.isAcceptState,
@@ -38,6 +42,6 @@ function DFAValidate (string) {
      return false;
     }
   });
-  return bool
+  return true
 } 
 
