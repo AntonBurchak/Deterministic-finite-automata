@@ -1,4 +1,4 @@
-const aplhabet = ['a', 'b'];
+const aplhabet = [0, 1];
 
 const OPTIONS = {
   q0: {
