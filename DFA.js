@@ -7,7 +7,7 @@ Object.keys(OPTIONS).forEach(key => {
 
 
 function goNextState(string) {
-  let current = transitionsTable['0'], log = [];
+  let current = transitionsTable.q0, log = [];
   
   for (let c in string) {
     
