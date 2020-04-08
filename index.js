@@ -22,6 +22,6 @@ btnTest.addEventListener('click', () => {
         alert('Invalid entries data');
     }
 
-   
+   console.log(goNextState(inpText.value).log);
 })
 

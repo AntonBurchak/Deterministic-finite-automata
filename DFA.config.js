@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const aplhabet = ['a', 'b'];
+=======
+const aplhabet = [0, 1];
+>>>>>>> 8b08c833f2ef019dff1d34f73909eb02edf7eadd
 
 const OPTIONS = {
    A:
