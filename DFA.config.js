@@ -1,45 +1,41 @@
-const aplhabet = ['0', '1'];
+const aplhabet = ['a', 'b'];
 
 const OPTIONS = {
-  q0: {
-    name: 'q0',
-    transitions: {
-      0: 'q1',
-      1: 'q0'
-    },
-    isAcceptState: false
-  },
-  q1: {
-    name: 'q1',
-    transitions: {
-      0: 'q1',
-      1: 'q2'
-    },
-    isAcceptState: false
-  },
-  q2: {
-    name: 'q2',
-    transitions: {
-      0: 'q3',
-      1: 'q0'
-    },
-    isAcceptState: false
-  },
-  q3: {
-    name: 'q3',
-    transitions: {
-      0: 'q1',
-      1: 'q4'
-    },
-    isAcceptState: false
-  },
-  q4: {
-    name: 'q4',
-    transitions: {
-      0: 'q4',
-      1: 'q4'
-    },
-    isAcceptState: true
-  }
+   A:
+    { name: 'A',
+      transitions: { a: 'AB', b: 'AF' },
+      isAcceptState: false },
+   AB:
+    { name: 'AB',
+      transitions: { a: 'AB', b: 'ACF' },
+      isAcceptState: false },
+   AF:
+    { name: 'AF',
+      transitions: { a: 'ABG', b: 'AEF' },
+      isAcceptState: false },
+   ACF:
+    { name: 'ACF',
+      transitions: { a: 'ABG', b: 'ADEF' },
+      isAcceptState: false },
+   ABG:
+    { name: 'ABG',
+      transitions: { a: 'AB', b: 'ACEF' },
+      isAcceptState: false },
+   AEF:
+    { name: 'AEF',
+      transitions: { a: 'ABG', b: 'AEF' },
+      isAcceptState: true },
+   ADEF:
+    { name: 'ADEF',
+      transitions: { a: 'ABEG', b: 'AEF' },
+      isAcceptState: true },
+   ACEF:
+    { name: 'ACEF',
+      transitions: { a: 'ABG', b: 'ADEF' },
+      isAcceptState: true },
+   ABEG:
+    { name: 'ABEG',
+      transitions: { a: 'AB', b: 'ACEF' },
+      isAcceptState: true } 
 }
-
+// OPTIONS = JSON.parse(OPTIONS);

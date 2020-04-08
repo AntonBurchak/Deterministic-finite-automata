@@ -10,7 +10,7 @@ btnTest.addEventListener('click', () => {
     if (DFAValidate(inpText.value)) {
         if (goNextState(inpText.value).state) testRes.style.color = 'green';
         else testRes.style.color = 'red';
-        
+        console.log()
         testRes.textContent = goNextState(inpText.value).state ? 'String is accepted by DFA' : 'String is not accepted by DFA';
         const list = goNextState(inpText.value).log;
         testList.innerHTML = ''
