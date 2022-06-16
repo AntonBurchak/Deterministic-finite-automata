@@ -36,5 +36,3 @@ Build the transition table:
 We build the transition diagram and check it from the original:
 ![Иллюстрация к проекту](https://github.com/AntonBurchak/Deterministic-finite-automata/blob/master/dist/images/automat.png)
 They are identical - the task is completed.
-
-Prepared by a student of Dnipro National University n. Olesya Honchara - Anton Burchak.
